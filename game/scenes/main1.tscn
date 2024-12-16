@@ -1,0 +1,2672 @@
+[gd_scene load_steps=126 format=3 uid="uid://bieb82aa17dio"]
+
+[ext_resource type="Script" path="res://game/scripts/main.gd" id="1_lgeud"]
+[ext_resource type="PackedScene" uid="uid://bc6bdacbq3uvt" path="res://game/scenes/menu.tscn" id="2_1hq12"]
+[ext_resource type="Texture2D" uid="uid://ubsjygv36rqc" path="res://assets/images/background/main_background.png" id="2_4gip8"]
+[ext_resource type="Texture2D" uid="uid://do3ss4ti7y3gn" path="res://assets/images/button states/server/server.png" id="4_hrkxj"]
+[ext_resource type="Texture2D" uid="uid://c0qe55kfkk5xm" path="res://assets/images/button states/server/server pressed.png" id="5_jpknk"]
+[ext_resource type="FontFile" uid="uid://nhrer1v18pou" path="res://assets/fonts/TheConfessionFullRegular-8qGz.ttf" id="6_tpltk"]
+[ext_resource type="Script" path="res://game/scripts/ServerButton.gd" id="7_v01rt"]
+[ext_resource type="Texture2D" uid="uid://cwjkiglxgkjtg" path="res://assets/images/misc/white.png" id="8_acdva"]
+[ext_resource type="Script" path="res://game/scripts/powerups/CPUUpgradeButton.gd" id="8_hlcci"]
+[ext_resource type="Texture2D" uid="uid://xn08bvtrrtgl" path="res://assets/images/button states/cpu/cpu.png" id="8_yn5hb"]
+[ext_resource type="Texture2D" uid="uid://sbjww04nslq0" path="res://assets/images/button states/cpu/cpu pressed.png" id="9_8ohij"]
+[ext_resource type="Texture2D" uid="uid://c2i0b768ahcqq" path="res://assets/images/button states/cooler/cooler.png" id="9_yfw44"]
+[ext_resource type="Texture2D" uid="uid://svq44u83g10l" path="res://assets/images/button states/cpu/cpu disabled.png" id="10_hjtdd"]
+[ext_resource type="Texture2D" uid="uid://ce3535fhlfh5k" path="res://assets/images/button states/cooler/cooler pressed.png" id="10_ko4nx"]
+[ext_resource type="Texture2D" uid="uid://bsaaxaqvogbnt" path="res://assets/images/button states/cooler/cooler disabled.png" id="11_5iv6l"]
+[ext_resource type="Script" path="res://game/scripts/powerups/CoolerUpgradeButton.gd" id="14_5roag"]
+[ext_resource type="Texture2D" uid="uid://cddugvn8bdbcs" path="res://assets/images/button states/ram/ram.png" id="16_3537c"]
+[ext_resource type="Texture2D" uid="uid://ymfhreoiny3y" path="res://assets/images/misc/blank image.png" id="17_imcaj"]
+[ext_resource type="Texture2D" uid="uid://cnufmsc8w1u2u" path="res://assets/images/button states/ram/ram pressed.png" id="17_pw3jb"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/CPUPermanent1.gd" id="17_wmeuq"]
+[ext_resource type="Texture2D" uid="uid://c00enac2ipv6y" path="res://assets/images/button states/ram/ram disabled.png" id="18_hhbcm"]
+[ext_resource type="Script" path="res://game/scripts/powerups/RAMUpgradeButton.gd" id="19_6sxi6"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/CoolerPermanent1.gd" id="20_8rog0"]
+[ext_resource type="Texture2D" uid="uid://dt1serftj4h8s" path="res://assets/images/button states/hdd/hdd.png" id="20_15wew"]
+[ext_resource type="Texture2D" uid="uid://i8yleclewfax" path="res://assets/images/button states/hdd/hdd pressed.png" id="21_xc1gg"]
+[ext_resource type="Texture2D" uid="uid://7c4rh4pi2pn0" path="res://assets/images/button states/hdd/hdd disabled.png" id="22_j0hl8"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/CPUPermanent2.gd" id="22_k03nu"]
+[ext_resource type="Texture2D" uid="uid://lt1edmviif48" path="res://assets/images/button states/gpu/gpu.png" id="24_a7bwt"]
+[ext_resource type="Script" path="res://game/scripts/powerups/HDDUpgradeButton.gd" id="24_r6son"]
+[ext_resource type="Texture2D" uid="uid://dbca3aha6orkm" path="res://assets/images/button states/gpu/gpu pressed.png" id="25_fus8l"]
+[ext_resource type="Texture2D" uid="uid://cmeojgyax8id3" path="res://assets/images/button states/gpu/gpu disabled.png" id="26_v2cgt"]
+[ext_resource type="Texture2D" uid="uid://cbl17xriombe5" path="res://assets/images/permanent upgrades/cpu permanent/cpu perm 1.png" id="28_axth4"]
+[ext_resource type="Script" path="res://game/scripts/powerups/GPUUpgradeButton.gd" id="28_u7p57"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/RAMPermanent1.gd" id="29_lbnyv"]
+[ext_resource type="PackedScene" uid="uid://dwolidw2pe0as" path="res://game/scenes/stats_screen.tscn" id="30_rsfvc"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/CoolerPermanent2.gd" id="31_1yiap"]
+[ext_resource type="Texture2D" uid="uid://82qsymnknx2w" path="res://assets/images/permanent upgrades/cooler permanent/cooler perm 1.png" id="31_o5a38"]
+[ext_resource type="PackedScene" uid="uid://c4lm8tgkaj4dr" path="res://game/scenes/credits.tscn" id="31_ug32m"]
+[ext_resource type="PackedScene" uid="uid://dmf2qnpnc1drc" path="res://game/scenes/settings_screen.tscn" id="32_slo72"]
+[ext_resource type="Texture2D" uid="uid://ceurg77dsfppm" path="res://assets/images/permanent upgrades/cpu permanent/cpu perm 2.png" id="33_lhafi"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/CPUPermanent3.gd" id="33_x25nq"]
+[ext_resource type="Texture2D" uid="uid://deqovm6mjqv0d" path="res://assets/images/permanent upgrades/ram permanent/ram perm 1.png" id="35_4fpf2"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/RAMPermanent2.gd" id="35_fc03c"]
+[ext_resource type="Texture2D" uid="uid://bpo5nfnbunbql" path="res://assets/images/dots/5 dots empty.png" id="35_ih6wm"]
+[ext_resource type="Texture2D" uid="uid://cuh03uu4627nx" path="res://assets/images/dots/1 dot full.png" id="35_k2hp4"]
+[ext_resource type="Script" path="res://game/scripts/Dots.gd" id="35_r8a6g"]
+[ext_resource type="Texture2D" uid="uid://7wltm43btirf" path="res://assets/images/permanent upgrades/cooler permanent/cooler perm 2.png" id="37_qaleu"]
+[ext_resource type="Texture2D" uid="uid://cf2o73h3hm83c" path="res://assets/images/dots/2 dots full.png" id="37_ytu4o"]
+[ext_resource type="Texture2D" uid="uid://cwiy4tybqmnnf" path="res://assets/images/dots/3 dots full.png" id="38_75gxe"]
+[ext_resource type="Texture2D" uid="uid://lc1dgu3a658g" path="res://assets/images/permanent upgrades/cpu permanent/cpu perm 3.png" id="39_53pif"]
+[ext_resource type="Texture2D" uid="uid://bbuqel5gmne8e" path="res://assets/images/dots/4 dots full.png" id="39_67rhp"]
+[ext_resource type="Texture2D" uid="uid://si42a25r5sig" path="res://assets/images/dots/5 dots full.png" id="40_1xttx"]
+[ext_resource type="Texture2D" uid="uid://c2nr30n8c0xnd" path="res://assets/images/permanent upgrades/ram permanent/ram perm 2.png" id="41_d1u6q"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/HDDPermanent1.gd" id="41_uungk"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/HDDPermanent2.gd" id="43_li58x"]
+[ext_resource type="Texture2D" uid="uid://dncnl3uu7f8jl" path="res://assets/images/permanent upgrades/hdd permanent/hdd perm 1.png" id="43_s05nw"]
+[ext_resource type="Texture2D" uid="uid://bct3mdg7q2rjs" path="res://assets/images/permanent upgrades/hdd permanent/hdd perm 2.png" id="45_2c02s"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/RAMPermanent3.gd" id="45_nyyrs"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/CPUPermanent4.gd" id="47_6ru4l"]
+[ext_resource type="Texture2D" uid="uid://dty7hkm1uq6jd" path="res://assets/images/permanent upgrades/ram permanent/ram perm 3.png" id="47_krofy"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/CoolerPermanent3.gd" id="49_7qgw1"]
+[ext_resource type="Texture2D" uid="uid://dwkoee8cpas8d" path="res://assets/images/permanent upgrades/cpu permanent/cpu perm 4.png" id="49_a0476"]
+[ext_resource type="Texture2D" uid="uid://bycbrc1sjwtgq" path="res://assets/images/permanent upgrades/cooler permanent/cooler perm 3.png" id="51_32e75"]
+[ext_resource type="Texture2D" uid="uid://cmob5ky1ssmdy" path="res://assets/images/button states/ram/ram hidden.png" id="52_hjssi"]
+[ext_resource type="Texture2D" uid="uid://bqdt3b5bv4t8s" path="res://assets/images/button states/hdd/hdd hidden.png" id="53_2mwbp"]
+[ext_resource type="Texture2D" uid="uid://b57nwg0i53lbt" path="res://assets/images/permanent upgrades/gpu permanent/gpu perm 1.png" id="53_8ik6s"]
+[ext_resource type="Script" path="res://game/scripts/permanent upgrades/GPUPermanent1.gd" id="55_ib2o7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47e5x"]
+resource_local_to_scene = true
+content_margin_top = 1.0
+bg_color = Color(0, 0, 0, 0.635294)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 10
+expand_margin_bottom = 1.0
+anti_aliasing_size = 2.0
+
+[sub_resource type="Animation" id="Animation_uryrh"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(73, 41), Vector2(73, 15)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_awh1t"]
+_data = {
+"show click amount": SubResource("Animation_uryrh")
+}
+
+[sub_resource type="Animation" id="Animation_rhnwe"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(116, 69), Vector2(116, 43)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eco77"]
+_data = {
+"show click amount": SubResource("Animation_rhnwe")
+}
+
+[sub_resource type="Animation" id="Animation_nnqpv"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(81, 100), Vector2(81, 76)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_euwi4"]
+_data = {
+"show click amount": SubResource("Animation_nnqpv")
+}
+
+[sub_resource type="Animation" id="Animation_m0ybh"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(113, 118), Vector2(113, 92)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label4:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b0y23"]
+_data = {
+"show click amount": SubResource("Animation_m0ybh")
+}
+
+[sub_resource type="Animation" id="Animation_kd0vj"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(88, 76), Vector2(88, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label5:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6qfcq"]
+_data = {
+"show click amount": SubResource("Animation_kd0vj")
+}
+
+[sub_resource type="Animation" id="Animation_y7vq1"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label6:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(114, 38), Vector2(114, 12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label6:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u0rt2"]
+_data = {
+"show click amount": SubResource("Animation_y7vq1")
+}
+
+[sub_resource type="Animation" id="Animation_4aeqn"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label7:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(85, 20), Vector2(85, -6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label7:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lcak3"]
+_data = {
+"show click amount": SubResource("Animation_4aeqn")
+}
+
+[sub_resource type="Animation" id="Animation_joiak"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label8:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(89, 130), Vector2(89, 104)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label8:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tq6ng"]
+_data = {
+"show click amount": SubResource("Animation_joiak")
+}
+
+[sub_resource type="Animation" id="Animation_leu5u"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label9:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(114, 92), Vector2(114, 66)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label9:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_te37u"]
+_data = {
+"show click amount": SubResource("Animation_leu5u")
+}
+
+[sub_resource type="Animation" id="Animation_n1c3l"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label10:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(61, 61), Vector2(61, 35)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label10:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_end11"]
+_data = {
+"show click amount": SubResource("Animation_n1c3l")
+}
+
+[sub_resource type="Animation" id="Animation_1vpbf"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label11:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(94, 51), Vector2(94, 25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label11:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ifgb5"]
+_data = {
+"show click amount": SubResource("Animation_1vpbf")
+}
+
+[sub_resource type="Animation" id="Animation_w34k8"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label12:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(99, 105), Vector2(99, 79)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label12:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yyjck"]
+_data = {
+"show click amount": SubResource("Animation_w34k8")
+}
+
+[sub_resource type="Animation" id="Animation_74yac"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label13:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(127, 104), Vector2(127, 78)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label13:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5k52x"]
+_data = {
+"show click amount": SubResource("Animation_74yac")
+}
+
+[sub_resource type="Animation" id="Animation_6mh5g"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label14:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(128, 81), Vector2(128, 55)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label14:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yajvw"]
+_data = {
+"show click amount": SubResource("Animation_6mh5g")
+}
+
+[sub_resource type="Animation" id="Animation_hkhup"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label15:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(127, 54), Vector2(127, 28)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label15:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bnrbf"]
+_data = {
+"show click amount": SubResource("Animation_hkhup")
+}
+
+[sub_resource type="Animation" id="Animation_05nu3"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label16:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(105, 26), Vector2(105, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label16:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_28mws"]
+_data = {
+"show click amount": SubResource("Animation_05nu3")
+}
+
+[sub_resource type="Animation" id="Animation_616gk"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label17:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(63, 26), Vector2(63, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label17:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3k8ok"]
+_data = {
+"show click amount": SubResource("Animation_616gk")
+}
+
+[sub_resource type="Animation" id="Animation_buv3r"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label18:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(109, 132), Vector2(109, 106)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label18:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xvv3t"]
+_data = {
+"show click amount": SubResource("Animation_buv3r")
+}
+
+[sub_resource type="Animation" id="Animation_s8wwm"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label19:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(67, 81), Vector2(67, 55)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label19:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_exb4f"]
+_data = {
+"show click amount": SubResource("Animation_s8wwm")
+}
+
+[sub_resource type="Animation" id="Animation_7yowx"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label20:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(53, 42), Vector2(53, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label20:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1suvj"]
+_data = {
+"show click amount": SubResource("Animation_7yowx")
+}
+
+[sub_resource type="Animation" id="Animation_5rgnm"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label21:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(82, 66), Vector2(82, 40)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label21:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p852v"]
+_data = {
+"show click amount": SubResource("Animation_5rgnm")
+}
+
+[sub_resource type="Animation" id="Animation_o4gn6"]
+resource_name = "show click amount"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ServerButton/Label22:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(82, 30), Vector2(82, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ServerButton/Label22:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mr4ly"]
+_data = {
+"show click amount": SubResource("Animation_o4gn6")
+}
+
+[sub_resource type="Gradient" id="Gradient_r4uj8"]
+colors = PackedColorArray(0.510724, 0.3867, 0.110006, 1, 0.647059, 0.513726, 0.2, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e77lt"]
+gradient = SubResource("Gradient_r4uj8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_31ybq"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(2, 2, 1)
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector3(6, 6, 0)
+spread = 109.719
+flatness = 0.528
+initial_velocity_min = 11.24
+initial_velocity_max = 44.0
+orbit_velocity_min = 0.044
+orbit_velocity_max = 0.089
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.15
+color = Color(0.498962, 0.392085, 0.139643, 1)
+color_ramp = SubResource("GradientTexture1D_e77lt")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hf4v4"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 121.854
+flatness = 0.202
+initial_velocity_min = 157.3
+initial_velocity_max = 363.49
+orbit_velocity_min = 0.135
+orbit_velocity_max = 0.449
+radial_velocity_min = 5.0
+radial_velocity_max = 15.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.25
+scale_max = 0.45
+color = Color(0.529488, 0.416473, 1, 1)
+hue_variation_max = 0.04
+
+[sub_resource type="Gradient" id="Gradient_86x1j"]
+colors = PackedColorArray(0.678431, 0.270588, 0.0980392, 1, 0.696525, 0.696525, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_a5lvk"]
+gradient = SubResource("Gradient_86x1j")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gstb6"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 127.55
+spread = 121.854
+flatness = 0.416
+initial_velocity_min = 191.47
+initial_velocity_max = 270.11
+orbit_velocity_min = 0.45
+orbit_velocity_max = 0.629
+gravity = Vector3(0, 0, 0)
+scale_min = 0.25
+scale_max = 0.3
+color = Color(0.677347, 0.271901, 0.096482, 1)
+color_ramp = SubResource("GradientTexture1D_a5lvk")
+hue_variation_min = -0.05
+hue_variation_max = 0.07
+anim_speed_min = 1.26
+anim_speed_max = 8.09
+turbulence_noise_speed_random = 0.37
+turbulence_influence_min = 0.395
+turbulence_influence_max = 0.395
+turbulence_initial_displacement_min = 29.5
+turbulence_initial_displacement_max = 59.0
+
+[sub_resource type="Gradient" id="Gradient_6lslr"]
+colors = PackedColorArray(0.568627, 0.454902, 0, 0.576471, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1pudg"]
+gradient = SubResource("Gradient_6lslr")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_f5r17"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 103.98
+direction = Vector3(0, 0, 0)
+spread = 78.103
+flatness = 0.126
+initial_velocity_min = 229.9
+initial_velocity_max = 367.83
+orbit_velocity_min = 0.184
+orbit_velocity_max = 0.506
+gravity = Vector3(0, 0, 0)
+scale_min = 0.25
+scale_max = 0.3
+color = Color(0.568627, 0.454902, 0, 0.576471)
+color_ramp = SubResource("GradientTexture1D_1pudg")
+hue_variation_min = -0.02
+hue_variation_max = 0.11
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_43vaw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4way"]
+resource_local_to_scene = true
+content_margin_top = 1.0
+bg_color = Color(0, 0, 0, 0.635294)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 10
+expand_margin_bottom = 1.0
+anti_aliasing_size = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwoir"]
+resource_local_to_scene = true
+content_margin_top = 1.0
+bg_color = Color(0, 0, 0, 0.635294)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 10
+expand_margin_bottom = 1.0
+anti_aliasing_size = 2.0
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_lgeud")
+
+[node name="Control" type="Control" parent="."]
+show_behind_parent = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 43.0
+offset_bottom = 42.0
+
+[node name="Background" type="TextureRect" parent="Control"]
+modulate = Color(0.678944, 0.678944, 0.678944, 1)
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 651.0
+texture = ExtResource("2_4gip8")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Labels" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UI" type="Control" parent="Control/Labels"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Task" type="Control" parent="Control/Labels/UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TaskRequirementLabel" type="Label" parent="Control/Labels/UI/Task"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 602.0
+offset_right = 442.0
+offset_bottom = 640.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 37
+text = "Requirement: 20 Servers"
+
+[node name="NextTaskLabel" type="Label" parent="Control/Labels/UI/Task"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 561.0
+offset_right = 536.0
+offset_bottom = 601.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 40
+text = "New Task: Unlock Permanent Upgrades
+"
+
+[node name="ServerAmountLabel" type="Label" parent="Control/Labels/UI"]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 265.0
+offset_right = 248.0
+offset_bottom = 315.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 49
+text = "Servers: 0"
+
+[node name="SPSLabel" type="Label" parent="Control/Labels/UI"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 304.0
+offset_right = 203.0
+offset_bottom = 344.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 39
+text = "SPS: 0"
+
+[node name="UpgradesLabel" type="Label" parent="Control/Labels/UI"]
+layout_mode = 0
+offset_left = 782.0
+offset_top = 20.0
+offset_right = 1030.0
+offset_bottom = 80.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 60
+text = "UPGRADES:"
+
+[node name="PermanentUpgradesLabel" type="Label" parent="Control/Labels/UI"]
+visible = false
+layout_mode = 0
+offset_left = 283.0
+offset_top = 9.0
+offset_right = 555.0
+offset_bottom = 132.0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 60
+text = "PERMANENT UPGRADES:"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Control/Labels/UI"]
+layout_mode = 1
+offset_right = 102.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 40
+text = "Menu"
+
+[node name="UpgradeNames" type="Control" parent="Control/Labels"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UpgradeDescriptions" type="Control" parent="Control/Labels"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CPUUpgradeDescription" type="Label" parent="Control/Labels/UpgradeDescriptions"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 786.0
+offset_top = 118.0
+offset_right = 1027.0
+offset_bottom = 251.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "A CPU that computes for you. Has a base SPS of 1, affected by Permanent Upgrades."
+autowrap_mode = 2
+
+[node name="CoolerUpgradeDescription" type="Label" parent="Control/Labels/UpgradeDescriptions"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 802.0
+offset_top = 211.0
+offset_right = 1043.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "The CPU Cooler increases your base Click Power by 1 by cooling the CPU, affected by Permanent Upgrades."
+autowrap_mode = 2
+
+[node name="RAMUpgradeDescription" type="Label" parent="Control/Labels/UpgradeDescriptions"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 805.0
+offset_top = 308.0
+offset_right = 1108.0
+offset_bottom = 371.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.976471, 0.0588235, 0.152941, 1)
+theme_override_colors/font_outline_color = Color(0.2, 1, 0.505882, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "                   ?"
+autowrap_mode = 2
+
+[node name="HDDUpgradeDescription" type="Label" parent="Control/Labels/UpgradeDescriptions"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 0
+offset_left = 816.0
+offset_top = 388.0
+offset_right = 1119.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.976471, 0.0588235, 0.152941, 1)
+theme_override_colors/font_outline_color = Color(0.2, 1, 0.505882, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "                   ?"
+autowrap_mode = 2
+
+[node name="GPUUpgradeDescription" type="Label" parent="Control/Labels/UpgradeDescriptions"]
+visible = false
+layout_mode = 0
+offset_left = 797.0
+offset_top = 483.0
+offset_right = 1100.0
+offset_bottom = 546.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.976471, 0.0588235, 0.152941, 1)
+theme_override_colors/font_outline_color = Color(0.2, 1, 0.505882, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "                   ?"
+autowrap_mode = 2
+
+[node name="???4" type="Label" parent="Control/Labels/UpgradeDescriptions"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 731.0
+offset_top = 578.0
+offset_right = 1034.0
+offset_bottom = 641.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.976471, 0.0588235, 0.152941, 1)
+theme_override_colors/font_outline_color = Color(0.2, 1, 0.505882, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "?        ?        ?"
+autowrap_mode = 2
+
+[node name="UpgradeCosts" type="Control" parent="Control/Labels"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CPUUpgradeCost" type="Label" parent="Control/Labels/UpgradeCosts"]
+layout_mode = 0
+offset_left = 771.0
+offset_top = 90.0
+offset_right = 846.0
+offset_bottom = 119.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 28
+text = "Cost: 10"
+
+[node name="CoolerUpgradeCost" type="Label" parent="Control/Labels/UpgradeCosts"]
+layout_mode = 0
+offset_left = 793.0
+offset_top = 183.0
+offset_right = 884.0
+offset_bottom = 212.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 28
+text = "Cost: 200"
+
+[node name="RAMUpgradeCost" type="Label" parent="Control/Labels/UpgradeCosts"]
+visible = false
+layout_mode = 0
+offset_left = 793.0
+offset_top = 276.0
+offset_right = 892.0
+offset_bottom = 305.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 28
+text = "Cost: 1000"
+
+[node name="HDDUpgradeCost" type="Label" parent="Control/Labels/UpgradeCosts"]
+visible = false
+layout_mode = 0
+offset_left = 803.0
+offset_top = 371.0
+offset_right = 888.0
+offset_bottom = 400.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 28
+text = "Cost: 10k"
+
+[node name="GPUUpgradeCost" type="Label" parent="Control/Labels/UpgradeCosts"]
+visible = false
+layout_mode = 0
+offset_left = 783.0
+offset_top = 457.0
+offset_right = 868.0
+offset_bottom = 486.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 28
+text = "Cost: 1m"
+
+[node name="UpgradesOwned" type="Control" parent="Control/Labels"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CPUOwned" type="Label" parent="Control/Labels/UpgradesOwned"]
+layout_mode = 0
+offset_left = 882.0
+offset_top = 87.0
+offset_right = 993.0
+offset_bottom = 122.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 35
+text = "Owned: 0"
+
+[node name="CoolerOwned" type="Label" parent="Control/Labels/UpgradesOwned"]
+layout_mode = 0
+offset_left = 916.0
+offset_top = 180.0
+offset_right = 1028.0
+offset_bottom = 215.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 35
+text = "Owned: 0"
+
+[node name="RAMOwned" type="Label" parent="Control/Labels/UpgradesOwned"]
+visible = false
+layout_mode = 0
+offset_left = 920.0
+offset_top = 271.0
+offset_right = 1031.0
+offset_bottom = 306.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 35
+text = "Owned: 0"
+
+[node name="HDDOwned" type="Label" parent="Control/Labels/UpgradesOwned"]
+visible = false
+layout_mode = 0
+offset_left = 939.0
+offset_top = 363.0
+offset_right = 1050.0
+offset_bottom = 398.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 35
+text = "Owned: 0"
+
+[node name="GPUOwned" type="Label" parent="Control/Labels/UpgradesOwned"]
+visible = false
+layout_mode = 0
+offset_left = 914.0
+offset_top = 455.0
+offset_right = 1025.0
+offset_bottom = 490.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 35
+text = "Owned: 0"
+
+[node name="Buttons" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayers" type="Node2D" parent="Control/Buttons"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_awh1t")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_eco77")
+}
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_euwi4")
+}
+
+[node name="AnimationPlayer4" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_b0y23")
+}
+
+[node name="AnimationPlayer5" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_6qfcq")
+}
+
+[node name="AnimationPlayer6" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_u0rt2")
+}
+
+[node name="AnimationPlayer7" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_lcak3")
+}
+
+[node name="AnimationPlayer8" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_tq6ng")
+}
+
+[node name="AnimationPlayer9" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_te37u")
+}
+
+[node name="AnimationPlayer10" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_end11")
+}
+
+[node name="AnimationPlayer11" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_ifgb5")
+}
+
+[node name="AnimationPlayer12" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_yyjck")
+}
+
+[node name="AnimationPlayer13" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_5k52x")
+}
+
+[node name="AnimationPlayer14" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_yajvw")
+}
+
+[node name="AnimationPlayer15" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_bnrbf")
+}
+
+[node name="AnimationPlayer16" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_28mws")
+}
+
+[node name="AnimationPlayer17" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_3k8ok")
+}
+
+[node name="AnimationPlayer18" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_xvv3t")
+}
+
+[node name="AnimationPlayer19" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_exb4f")
+}
+
+[node name="AnimationPlayer20" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_1suvj")
+}
+
+[node name="AnimationPlayer21" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_p852v")
+}
+
+[node name="AnimationPlayer22" type="AnimationPlayer" parent="Control/Buttons/AnimationPlayers"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_mr4ly")
+}
+
+[node name="ServerButton" type="TextureButton" parent="Control/Buttons"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 354.0
+offset_right = 285.0
+offset_bottom = 592.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("4_hrkxj")
+texture_pressed = ExtResource("5_jpknk")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("7_v01rt")
+
+[node name="Label1" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 73.0
+offset_top = 41.0
+offset_right = 94.0
+offset_bottom = 71.0006
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label2" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 116.0
+offset_top = 69.0
+offset_right = 137.0
+offset_bottom = 99.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label3" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 81.0
+offset_top = 100.0
+offset_right = 102.0
+offset_bottom = 130.001
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label4" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 113.0
+offset_top = 118.0
+offset_right = 134.0
+offset_bottom = 148.001
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label5" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 88.0
+offset_top = 76.0
+offset_right = 109.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label6" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 114.0
+offset_top = 38.0
+offset_right = 135.0
+offset_bottom = 68.0005
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label7" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 85.0
+offset_top = 20.0
+offset_right = 106.0
+offset_bottom = 50.0005
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label8" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 89.0
+offset_top = 130.0
+offset_right = 110.0
+offset_bottom = 160.001
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label9" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 114.0
+offset_top = 92.0
+offset_right = 135.0
+offset_bottom = 122.001
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label10" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 61.0
+offset_top = 61.0
+offset_right = 82.0
+offset_bottom = 91.0005
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label11" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 94.0
+offset_top = 51.0
+offset_right = 115.0
+offset_bottom = 81.0005
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label12" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 99.0
+offset_top = 105.0
+offset_right = 120.0
+offset_bottom = 135.001
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label13" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 127.0
+offset_top = 104.0
+offset_right = 148.0
+offset_bottom = 134.001
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label14" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_top = 81.0
+offset_right = 149.0
+offset_bottom = 111.001
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label15" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 127.0
+offset_top = 54.0
+offset_right = 148.0
+offset_bottom = 84.0005
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label16" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 105.0
+offset_top = 26.0
+offset_right = 126.0
+offset_bottom = 56.0005
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label17" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 63.0
+offset_top = 26.0
+offset_right = 84.0
+offset_bottom = 56.0005
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label18" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 109.0
+offset_top = 132.0
+offset_right = 130.0
+offset_bottom = 162.001
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label19" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 67.0
+offset_top = 81.0
+offset_right = 88.0
+offset_bottom = 111.001
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label20" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 53.0
+offset_top = 42.0
+offset_right = 74.0
+offset_bottom = 72.0005
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label21" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 82.0
+offset_top = 66.0
+offset_right = 103.0
+offset_bottom = 96.0005
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="Label22" type="Label" parent="Control/Buttons/ServerButton"]
+visible = false
+layout_mode = 0
+offset_left = 82.0
+offset_top = 30.0
+offset_right = 103.0
+offset_bottom = 60.0005
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+text = "+1"
+
+[node name="DravenClickParticles" type="GPUParticles2D" parent="Control/Buttons/ServerButton"]
+position = Vector2(100, 97)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_31ybq")
+texture = ExtResource("8_acdva")
+one_shot = true
+
+[node name="UpgradeButtons" type="Control" parent="Control/Buttons"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CPUUpgradeButton" type="TextureButton" parent="Control/Buttons/UpgradeButtons"]
+layout_mode = 0
+offset_left = 697.0
+offset_top = 114.0
+offset_right = 969.0
+offset_bottom = 352.0
+scale = Vector2(0.32, 0.32)
+texture_normal = ExtResource("8_yn5hb")
+texture_pressed = ExtResource("9_8ohij")
+texture_disabled = ExtResource("10_hjtdd")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("8_hlcci")
+
+[node name="CoolerUpgradeButton" type="TextureButton" parent="Control/Buttons/UpgradeButtons"]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 207.0
+offset_right = 1012.0
+offset_bottom = 465.0
+scale = Vector2(0.32, 0.32)
+texture_normal = ExtResource("9_yfw44")
+texture_pressed = ExtResource("10_ko4nx")
+texture_disabled = ExtResource("11_5iv6l")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("14_5roag")
+
+[node name="RAMUpgradeButton" type="TextureButton" parent="Control/Buttons/UpgradeButtons"]
+visible = false
+layout_mode = 0
+offset_left = 702.0
+offset_top = 301.0
+offset_right = 1029.0
+offset_bottom = 541.0
+scale = Vector2(0.32, 0.32)
+texture_normal = ExtResource("16_3537c")
+texture_pressed = ExtResource("17_pw3jb")
+texture_disabled = ExtResource("18_hhbcm")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("19_6sxi6")
+
+[node name="RevealRAMParticles" type="GPUParticles2D" parent="Control/Buttons/UpgradeButtons/RAMUpgradeButton"]
+position = Vector2(185, 200)
+emitting = false
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_hf4v4")
+texture = ExtResource("8_acdva")
+one_shot = true
+speed_scale = 1.5
+explosiveness = 0.22
+randomness = 0.79
+
+[node name="HDDUpgradeButton" type="TextureButton" parent="Control/Buttons/UpgradeButtons"]
+visible = false
+layout_mode = 0
+offset_left = 711.0
+offset_top = 395.0
+offset_right = 1038.0
+offset_bottom = 675.0
+scale = Vector2(0.32, 0.32)
+texture_normal = ExtResource("20_15wew")
+texture_pressed = ExtResource("21_xc1gg")
+texture_disabled = ExtResource("22_j0hl8")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("24_r6son")
+
+[node name="RevealHDDParticles" type="GPUParticles2D" parent="Control/Buttons/UpgradeButtons/HDDUpgradeButton"]
+position = Vector2(132, 224)
+emitting = false
+amount = 40
+process_material = SubResource("ParticleProcessMaterial_gstb6")
+texture = ExtResource("8_acdva")
+lifetime = 1.5
+one_shot = true
+speed_scale = 2.0
+
+[node name="GPUUpgradeButton" type="TextureButton" parent="Control/Buttons/UpgradeButtons"]
+visible = false
+layout_mode = 0
+offset_left = 692.0
+offset_top = 481.0
+offset_right = 1019.0
+offset_bottom = 753.0
+scale = Vector2(0.32, 0.32)
+texture_normal = ExtResource("24_a7bwt")
+texture_pressed = ExtResource("25_fus8l")
+texture_disabled = ExtResource("26_v2cgt")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("28_u7p57")
+
+[node name="RevealGPUParticles" type="GPUParticles2D" parent="Control/Buttons/UpgradeButtons/GPUUpgradeButton"]
+position = Vector2(166.667, 205.556)
+emitting = false
+amount = 45
+process_material = SubResource("ParticleProcessMaterial_f5r17")
+texture = ExtResource("8_acdva")
+one_shot = true
+
+[node name="PermanentUpgradeButtons" type="Control" parent="Control/Buttons"]
+anchors_preset = 0
+offset_left = 272.0
+offset_top = 131.0
+offset_right = 352.0
+offset_bottom = 198.0
+scale = Vector2(0.15, 0.15)
+
+[node name="HBoxPermContainer" type="GridContainer" parent="Control/Buttons/PermanentUpgradeButtons"]
+visible = false
+layout_mode = 0
+offset_right = 1695.0
+offset_bottom = 400.0
+scale = Vector2(1.15, 1.15)
+columns = 5
+
+[node name="CPUPermanent1" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+layout_mode = 2
+texture_normal = ExtResource("28_axth4")
+texture_disabled = ExtResource("17_imcaj")
+script = ExtResource("17_wmeuq")
+
+[node name="CPUPermanentUpgrade1Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent1"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 322.0
+offset_top = 131.0
+offset_right = 544.0
+offset_bottom = 297.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Increases the SPS of all current and future CPUs by 1000%.
+
+Cost: 2k Servers"
+autowrap_mode = 2
+
+[node name="CoolerPermanent1" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+layout_mode = 2
+texture_normal = ExtResource("31_o5a38")
+script = ExtResource("20_8rog0")
+
+[node name="CoolerPermanentUpgrade1Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent1"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 394.0
+offset_top = 131.0
+offset_right = 635.0
+offset_bottom = 264.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Increases your *base* Click Power by 500%.
+
+Cost: 10k Servers"
+autowrap_mode = 2
+
+[node name="CPUPPermanent2" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+layout_mode = 2
+texture_normal = ExtResource("33_lhafi")
+script = ExtResource("22_k03nu")
+
+[node name="CPUPermanentUpgrade2Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPPermanent2"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 439.0
+offset_top = 132.0
+offset_right = 680.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Increases the SPS of all current and future CPUs by 10000%.
+
+Buying this Permanent Upgrade unlocks a new Upgrade.
+
+Cost: 25k Servers"
+autowrap_mode = 2
+
+[node name="RAMPermanent1" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("35_4fpf2")
+script = ExtResource("29_lbnyv")
+
+[node name="RAMPermanentUpgrade1Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent1"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 502.0
+offset_top = 135.0
+offset_right = 743.0
+offset_bottom = 499.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Permanently reduces CPU and Cooler cost, significantly increases RAM SPS, and unlocks Upgrade Milestones.
+
+Upgrade Milestones give you a reward for every 25th of each upgrade bought.
+
+Cost: 1m Servers"
+autowrap_mode = 2
+
+[node name="CoolerPermanent2" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("37_qaleu")
+script = ExtResource("31_1yiap")
+
+[node name="CoolerPermanentUpgrade2Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent2"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 502.0
+offset_top = 135.0
+offset_right = 743.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Increases the power of Cooler by 10.
+
+Cost: 1m Servers"
+autowrap_mode = 2
+
+[node name="CPUPermanent3" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("39_53pif")
+script = ExtResource("33_x25nq")
+
+[node name="CPUPermanentUpgrade3Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent3"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 328.0
+offset_top = 201.0
+offset_right = 569.0
+offset_bottom = 301.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Doubles CPU SPS.
+
+Cost: 5m Servers"
+autowrap_mode = 2
+
+[node name="RAMPermanent2" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("41_d1u6q")
+script = ExtResource("35_fc03c")
+
+[node name="RAMPermanentUpgrade2Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent2"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 328.0
+offset_top = 201.0
+offset_right = 569.0
+offset_bottom = 301.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Increases RAM SPS by an additional 1000%.
+
+The final RAM upgrade before Tier 2 milestones.
+
+Buying this Permanent Upgrade unlocks a new Upgrade.
+
+Cost: 5m Servers"
+autowrap_mode = 2
+
+[node name="HDDPermanent1" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("43_s05nw")
+script = ExtResource("41_uungk")
+
+[node name="HDDPermanentUpgrade1Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent1"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 328.0
+offset_top = 201.0
+offset_right = 569.0
+offset_bottom = 433.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Significantly reduces HDD Upgrade Cost Scaling and increases its *base* SPS by 1000%.
+
+Cost: 30m Servers"
+autowrap_mode = 2
+
+[node name="HDDPermanent2" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("45_2c02s")
+script = ExtResource("43_li58x")
+
+[node name="HDDPermanentUpgrade2Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent2"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 328.0
+offset_top = 201.0
+offset_right = 569.0
+offset_bottom = 334.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Increases HDD SPS by 1000%.
+
+Cost: 10m Servers"
+autowrap_mode = 2
+
+[node name="RAMPermanent3" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("47_krofy")
+script = ExtResource("45_nyyrs")
+
+[node name="RAMPermanentUpgrade3Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent3"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 328.0
+offset_top = 201.0
+offset_right = 569.0
+offset_bottom = 367.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Increases RAM SPS by an additional 10000%.
+
+This Permanent Upgrade unlocks a new Upgrade.
+
+Unlocks Tier 2 Milestones for CPU, Cooler and RAM.
+
+Cost: 10m Servers"
+autowrap_mode = 2
+
+[node name="CPUPermanent4" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("49_a0476")
+script = ExtResource("47_6ru4l")
+
+[node name="CPUPermanentUpgrade4Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent4"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 328.0
+offset_top = 201.0
+offset_right = 569.0
+offset_bottom = 334.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Quadruples the current CPU SPS.
+
+Cost: 10m Servers"
+autowrap_mode = 2
+
+[node name="CoolerPermanent3" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("51_32e75")
+stretch_mode = 6
+script = ExtResource("49_7qgw1")
+
+[node name="CoolerPermanentUpgrade3Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent3"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 328.0
+offset_top = 201.0
+offset_right = 569.0
+offset_bottom = 334.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Quadruples the power of Cooler.
+
+Cost: 10m Servers"
+autowrap_mode = 2
+
+[node name="GPUPermanent1" type="TextureButton" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("53_8ik6s")
+script = ExtResource("55_ib2o7")
+
+[node name="GPUPermanentUpgrade1Description" type="Label" parent="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/GPUPermanent1"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 328.0
+offset_top = 201.0
+offset_right = 569.0
+offset_bottom = 334.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_47e5x")
+text = "Doubles the SPS of every upgrade.
+
+Cost: 100m Servers"
+autowrap_mode = 2
+
+[node name="DPSTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="AutoClickTimer" type="Timer" parent="."]
+wait_time = 30.0
+
+[node name="ServerButtonImage" type="Sprite2D" parent="."]
+position = Vector2(859, 103)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_hrkxj")
+
+[node name="ServerButtonImage2" type="Sprite2D" parent="."]
+position = Vector2(894, 194)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_hrkxj")
+
+[node name="ServerButtonImage3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(897, 285)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_hrkxj")
+
+[node name="ServerButtonImage4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(913, 377)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_hrkxj")
+
+[node name="ServerButtonImage5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(888, 470)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_hrkxj")
+
+[node name="RAMUpgradeDark" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(756, 332)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("52_hjssi")
+
+[node name="HDDUpgradeDark" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(772, 419)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("53_2mwbp")
+
+[node name="GPUUpgradeDark" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(761, 511)
+scale = Vector2(0.18, 0.18)
+texture = SubResource("CompressedTexture2D_43vaw")
+
+[node name="ClickCountLabel" type="Label" parent="."]
+visible = false
+offset_left = 448.0
+offset_top = 561.0
+offset_right = 488.0
+offset_bottom = 601.0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="Dots" type="Node2D" parent="."]
+script = ExtResource("35_r8a6g")
+
+[node name="CPUDots" type="Node2D" parent="Dots"]
+
+[node name="5DotsEmpty" type="Sprite2D" parent="Dots/CPUDots"]
+visible = false
+position = Vector2(871, 145)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("35_ih6wm")
+
+[node name="1DotFull" type="Sprite2D" parent="Dots/CPUDots"]
+visible = false
+position = Vector2(871, 145)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("35_k2hp4")
+
+[node name="2DotsFull" type="Sprite2D" parent="Dots/CPUDots"]
+visible = false
+position = Vector2(871, 145)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("37_ytu4o")
+
+[node name="3DotsFull" type="Sprite2D" parent="Dots/CPUDots"]
+visible = false
+position = Vector2(871, 145)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("38_75gxe")
+
+[node name="4DotsFull" type="Sprite2D" parent="Dots/CPUDots"]
+visible = false
+position = Vector2(871, 145)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("39_67rhp")
+
+[node name="5DotsFull" type="Sprite2D" parent="Dots/CPUDots"]
+visible = false
+position = Vector2(871, 145)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("40_1xttx")
+
+[node name="CPUDotsInfoHover" type="Label" parent="Dots/CPUDots"]
+visible = false
+offset_left = 959.0
+offset_top = 133.0
+offset_right = 1138.0
+offset_bottom = 157.0
+mouse_filter = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_r4way")
+text = "See CPU Milestone Info"
+
+[node name="CPUDotsInfo" type="Label" parent="Dots/CPUDots"]
+visible = false
+top_level = true
+offset_left = 765.0
+offset_top = 165.0
+offset_right = 1144.0
+offset_bottom = 306.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwoir")
+text = "Milestone 1: +5% CPU SPS
+------------------
+Milestone 2: -5% CPU Cost Scaling
+------------------
+Milestone 3: New CPU Permanent Upgrade
+------------------
+Milestone 4: ?
+------------------
+Milestone 5: ?"
+
+[node name="CoolerDots" type="Node2D" parent="Dots"]
+
+[node name="5DotsEmpty" type="Sprite2D" parent="Dots/CoolerDots"]
+visible = false
+position = Vector2(892, 241)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("35_ih6wm")
+
+[node name="1DotFull" type="Sprite2D" parent="Dots/CoolerDots"]
+visible = false
+position = Vector2(893, 241)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("35_k2hp4")
+
+[node name="2DotsFull" type="Sprite2D" parent="Dots/CoolerDots"]
+visible = false
+position = Vector2(893, 241)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("37_ytu4o")
+
+[node name="3DotsFull" type="Sprite2D" parent="Dots/CoolerDots"]
+visible = false
+position = Vector2(893, 241)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("38_75gxe")
+
+[node name="4DotsFull" type="Sprite2D" parent="Dots/CoolerDots"]
+visible = false
+position = Vector2(893, 241)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("39_67rhp")
+
+[node name="5DotsFull" type="Sprite2D" parent="Dots/CoolerDots"]
+visible = false
+position = Vector2(893, 241)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("40_1xttx")
+
+[node name="CoolerDotsInfoHover" type="Label" parent="Dots/CoolerDots"]
+visible = false
+offset_left = 972.0
+offset_top = 228.0
+offset_right = 1151.0
+offset_bottom = 252.0
+mouse_filter = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_r4way")
+text = "See Cooler Milestone Info"
+
+[node name="CoolerDotsInfo" type="Label" parent="Dots/CoolerDots"]
+visible = false
+top_level = true
+offset_left = 765.0
+offset_top = 258.0
+offset_right = 1144.0
+offset_bottom = 399.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwoir")
+text = "Milestone 1: New Cooler Permanent Upgrade
+------------------
+Milestone 2: Autoclicker: Server is
+automatically clicked every 30 seconds
+------------------
+Milestone 3: Every Cooler bought increases
+base Click Power by 10
+------------------
+Milestone 4: ?
+------------------
+Milestone 5: ?"
+
+[node name="RAMDots" type="Node2D" parent="Dots"]
+
+[node name="5DotsEmpty" type="Sprite2D" parent="Dots/RAMDots"]
+visible = false
+position = Vector2(887, 330)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("35_ih6wm")
+
+[node name="1DotFull" type="Sprite2D" parent="Dots/RAMDots"]
+visible = false
+position = Vector2(887, 330)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("35_k2hp4")
+
+[node name="2DotsFull" type="Sprite2D" parent="Dots/RAMDots"]
+visible = false
+position = Vector2(887, 330)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("37_ytu4o")
+
+[node name="3DotsFull" type="Sprite2D" parent="Dots/RAMDots"]
+visible = false
+position = Vector2(887, 330)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("38_75gxe")
+
+[node name="4DotsFull" type="Sprite2D" parent="Dots/RAMDots"]
+visible = false
+position = Vector2(887, 330)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("39_67rhp")
+
+[node name="5DotsFull" type="Sprite2D" parent="Dots/RAMDots"]
+visible = false
+position = Vector2(887, 330)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("40_1xttx")
+
+[node name="RAMDotsInfoHover" type="Label" parent="Dots/RAMDots"]
+visible = false
+offset_left = 973.0
+offset_top = 318.0
+offset_right = 1146.0
+offset_bottom = 342.0
+mouse_filter = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_r4way")
+text = "See RAM Milestone Info"
+
+[node name="RAMDotsInfo" type="Label" parent="Dots/RAMDots"]
+visible = false
+top_level = true
+offset_left = 764.0
+offset_top = 336.0
+offset_right = 1148.0
+offset_bottom = 645.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwoir")
+text = "Milestone 1: -25% RAM Cost Scaling
+------------------
+Milestone 2: Every RAM owned increases
+CPU SPS by 1%
+------------------
+Milestone 3: For each upgrade bought, reduce
+the Autoclicker Interval by 0.005 seconds
+------------------
+Milestone 4: ?
+------------------
+Milestone 5: ?"
+
+[node name="HDDDots" type="Node2D" parent="Dots"]
+
+[node name="5DotsEmpty" type="Sprite2D" parent="Dots/HDDDots"]
+visible = false
+position = Vector2(897, 423)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("35_ih6wm")
+
+[node name="1DotFull" type="Sprite2D" parent="Dots/HDDDots"]
+visible = false
+position = Vector2(897, 423)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("35_k2hp4")
+
+[node name="2DotsFull" type="Sprite2D" parent="Dots/HDDDots"]
+visible = false
+position = Vector2(897, 423)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("37_ytu4o")
+
+[node name="3DotsFull" type="Sprite2D" parent="Dots/HDDDots"]
+visible = false
+position = Vector2(897, 423)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("38_75gxe")
+
+[node name="4DotsFull" type="Sprite2D" parent="Dots/HDDDots"]
+visible = false
+position = Vector2(897, 423)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("39_67rhp")
+
+[node name="5DotsFull" type="Sprite2D" parent="Dots/HDDDots"]
+visible = false
+position = Vector2(897, 423)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("40_1xttx")
+
+[node name="HDDDotsInfoHover" type="Label" parent="Dots/HDDDots"]
+visible = false
+offset_left = 984.0
+offset_top = 412.0
+offset_right = 1133.0
+offset_bottom = 436.0
+mouse_filter = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_r4way")
+text = "See HDD Milestone Info"
+
+[node name="HDDDotsInfo" type="Label" parent="Dots/HDDDots"]
+visible = false
+top_level = true
+offset_left = 757.0
+offset_top = 306.0
+offset_right = 1149.0
+offset_bottom = 643.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwoir")
+text = "Milestone 1: Base clicks are now increased by
+0.1% of base of HDD DPS
+------------------
+Milestone 2: New HDD Permanent Upgrade
+------------------
+Milestone 3: Base clicks are now increased by
+% of base of HDD DPS
+------------------
+Milestone 4: ?
+------------------
+Milestone 5: ?"
+
+[node name="GPUDots" type="Node2D" parent="Dots"]
+
+[node name="5DotsEmpty" type="Sprite2D" parent="Dots/GPUDots"]
+visible = false
+position = Vector2(877, 517)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("35_ih6wm")
+
+[node name="1DotFull" type="Sprite2D" parent="Dots/GPUDots"]
+visible = false
+position = Vector2(877, 517)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("35_k2hp4")
+
+[node name="2DotsFull" type="Sprite2D" parent="Dots/GPUDots"]
+visible = false
+position = Vector2(877, 517)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("37_ytu4o")
+
+[node name="3DotsFull" type="Sprite2D" parent="Dots/GPUDots"]
+visible = false
+position = Vector2(877, 517)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("38_75gxe")
+
+[node name="4DotsFull" type="Sprite2D" parent="Dots/GPUDots"]
+visible = false
+position = Vector2(877, 517)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("39_67rhp")
+
+[node name="5DotsFull" type="Sprite2D" parent="Dots/GPUDots"]
+visible = false
+position = Vector2(877, 517)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("40_1xttx")
+
+[node name="GPUDotsInfoHover" type="Label" parent="Dots/GPUDots"]
+visible = false
+offset_left = 962.0
+offset_top = 505.0
+offset_right = 1111.0
+offset_bottom = 529.0
+mouse_filter = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_r4way")
+text = "See GPU Milestone Info"
+
+[node name="GPUDotsInfo" type="Label" parent="Dots/GPUDots"]
+visible = false
+top_level = true
+offset_left = 748.0
+offset_top = 280.0
+offset_right = 1150.0
+offset_bottom = 645.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_tpltk")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwoir")
+text = "Milestone 1: Increases the SPS of every
+upgrade by 333%.
+------------------
+Milestone 2: Reduces the base Cost Scaling of 
+every upgrade.
+------------------
+Milestone 3: Every current and future owned
+Permanent Upgrade has its effects 
+(except Cost Scaling) doubled. Excludes GPU.
+------------------
+Milestone 4: ?
+------------------
+Milestone 5: ?"
+
+[node name="Menu" parent="." instance=ExtResource("2_1hq12")]
+visible = false
+
+[node name="StatsScreen" parent="." instance=ExtResource("30_rsfvc")]
+visible = false
+
+[node name="Credits" parent="." instance=ExtResource("31_ug32m")]
+visible = false
+
+[node name="SettingsScreen" parent="." instance=ExtResource("32_slo72")]
+visible = false
+
+[connection signal="pressed" from="Control/Labels/UI/Button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Control/Buttons/ServerButton" to="Control/Buttons/ServerButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/UpgradeButtons/CPUUpgradeButton" to="Control/Buttons/UpgradeButtons/CPUUpgradeButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/UpgradeButtons/CPUUpgradeButton" to="Control/Buttons/UpgradeButtons/CPUUpgradeButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/UpgradeButtons/CPUUpgradeButton" to="Control/Buttons/UpgradeButtons/CPUUpgradeButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/UpgradeButtons/CoolerUpgradeButton" to="Control/Buttons/UpgradeButtons/CoolerUpgradeButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/UpgradeButtons/CoolerUpgradeButton" to="Control/Buttons/UpgradeButtons/CoolerUpgradeButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/UpgradeButtons/CoolerUpgradeButton" to="Control/Buttons/UpgradeButtons/CoolerUpgradeButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/UpgradeButtons/RAMUpgradeButton" to="Control/Buttons/UpgradeButtons/RAMUpgradeButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/UpgradeButtons/RAMUpgradeButton" to="Control/Buttons/UpgradeButtons/RAMUpgradeButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/UpgradeButtons/RAMUpgradeButton" to="Control/Buttons/UpgradeButtons/RAMUpgradeButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/UpgradeButtons/HDDUpgradeButton" to="Control/Buttons/UpgradeButtons/HDDUpgradeButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/UpgradeButtons/HDDUpgradeButton" to="Control/Buttons/UpgradeButtons/HDDUpgradeButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/UpgradeButtons/HDDUpgradeButton" to="Control/Buttons/UpgradeButtons/HDDUpgradeButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/UpgradeButtons/GPUUpgradeButton" to="Control/Buttons/UpgradeButtons/GPUUpgradeButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/UpgradeButtons/GPUUpgradeButton" to="Control/Buttons/UpgradeButtons/GPUUpgradeButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/UpgradeButtons/GPUUpgradeButton" to="Control/Buttons/UpgradeButtons/GPUUpgradeButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent1" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent1" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent1" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent1" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPPermanent2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPPermanent2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPPermanent2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent1" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent1" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent3" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent3" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent3" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent3" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent3" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent1" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent1" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent2" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/HDDPermanent2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent3" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent3" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent3" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent3" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/RAMPermanent3" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent4" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent4" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent4" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent4" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CPUPermanent4" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent3" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent3" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent3" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent3" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/CoolerPermanent3" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/GPUPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/GPUPermanent1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/GPUPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/GPUPermanent1" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/GPUPermanent1" to="Control/Buttons/PermanentUpgradeButtons/HBoxPermContainer/GPUPermanent1" method="_on_pressed"]
+[connection signal="timeout" from="DPSTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="DPSTimer" to="StatsScreen" method="_on_dps_timer_timeout"]
+[connection signal="timeout" from="AutoClickTimer" to="Control/Buttons/ServerButton" method="_on_auto_click_timer_timeout"]
+[connection signal="mouse_entered" from="Dots/CPUDots/CPUDotsInfoHover" to="Dots" method="_on_cursor_dots_info_hover_mouse_entered"]
+[connection signal="mouse_exited" from="Dots/CPUDots/CPUDotsInfoHover" to="Dots" method="_on_cursor_dots_info_hover_mouse_exited"]
+[connection signal="mouse_entered" from="Dots/CoolerDots/CoolerDotsInfoHover" to="Dots" method="_on_rxamz_dots_info_hover_mouse_entered"]
+[connection signal="mouse_exited" from="Dots/CoolerDots/CoolerDotsInfoHover" to="Dots" method="_on_rxamz_dots_info_hover_mouse_exited"]
+[connection signal="mouse_entered" from="Dots/RAMDots/RAMDotsInfoHover" to="Dots" method="_on_zoltar_dots_info_hover_mouse_entered"]
+[connection signal="mouse_exited" from="Dots/RAMDots/RAMDotsInfoHover" to="Dots" method="_on_zoltar_dots_info_hover_mouse_exited"]
+[connection signal="mouse_entered" from="Dots/HDDDots/HDDDotsInfoHover" to="Dots" method="_on_oi_dots_info_hover_mouse_entered"]
+[connection signal="mouse_exited" from="Dots/HDDDots/HDDDotsInfoHover" to="Dots" method="_on_oi_dots_info_hover_mouse_exited"]
+[connection signal="mouse_entered" from="Dots/GPUDots/GPUDotsInfoHover" to="Dots" method="_on_hitman_dots_info_hover_mouse_entered"]
+[connection signal="mouse_exited" from="Dots/GPUDots/GPUDotsInfoHover" to="Dots" method="_on_hitman_dots_info_hover_mouse_exited"]
+[connection signal="credits_opened" from="Credits" to="Control/Buttons/ServerButton" method="_on_credits_credits_opened"]

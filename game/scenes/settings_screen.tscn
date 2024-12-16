@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmf2qnpnc1drc"]
+
+[ext_resource type="Script" path="res://game/scripts/settings_screen.gd" id="1_way3w"]
+[ext_resource type="Texture2D" uid="uid://cl52rm00slg5m" path="res://assets/images/background/settings_background.png" id="2_y78hj"]
+[ext_resource type="FontFile" uid="uid://nhrer1v18pou" path="res://assets/fonts/TheConfessionFullRegular-8qGz.ttf" id="3_jt82j"]
+[ext_resource type="Texture2D" uid="uid://ce53d038qf20s" path="res://assets/images/misc/checkbox true.png" id="4_rfw7f"]
+[ext_resource type="Texture2D" uid="uid://c6worjefctf6n" path="res://assets/images/misc/checkbox false.png" id="5_ssn6u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_584nf"]
+bg_color = Color(0, 0, 0, 0.945098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1kyr"]
+bg_color = Color(0, 0, 0, 0.670588)
+
+[node name="SettingsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_way3w")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.650128, 0.650128, 0.650128, 1)
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 654.0
+texture = ExtResource("2_y78hj")
+expand_mode = 1
+
+[node name="FullScreenSetting" type="CheckBox" parent="."]
+layout_mode = 1
+offset_left = 77.0
+offset_top = 116.0
+offset_right = 285.0
+offset_bottom = 169.0
+theme_override_fonts/font = ExtResource("3_jt82j")
+theme_override_font_sizes/font_size = 45
+theme_override_icons/checked = ExtResource("4_rfw7f")
+theme_override_icons/unchecked = ExtResource("5_ssn6u")
+text = "Full Screen"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 530.0
+offset_right = 775.0
+offset_bottom = 578.0
+theme_override_fonts/font = ExtResource("3_jt82j")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_584nf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_t1kyr")
+text = "Back"
+
+[connection signal="pressed" from="FullScreenSetting" to="." method="_on_full_screen_setting_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

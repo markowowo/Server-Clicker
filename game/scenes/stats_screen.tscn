@@ -1,0 +1,245 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwolidw2pe0as"]
+
+[ext_resource type="Script" path="res://game/scripts/stats_screen.gd" id="1_5ku66"]
+[ext_resource type="Texture2D" uid="uid://bex1dlc6bfcbr" path="res://assets/images/background/stats_background.png" id="3_4q5xl"]
+[ext_resource type="FontFile" uid="uid://nhrer1v18pou" path="res://assets/fonts/TheConfessionFullRegular-8qGz.ttf" id="3_ulfqj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ooydn"]
+resource_local_to_scene = true
+content_margin_top = 1.0
+bg_color = Color(0, 0, 0, 0.635294)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 10
+expand_margin_bottom = 1.0
+anti_aliasing_size = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6xgt"]
+bg_color = Color(0, 0, 0, 0.945098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lsk2w"]
+bg_color = Color(0, 0, 0, 0.670588)
+
+[node name="StatsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ku66")
+
+[node name="StatsLabels" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TimePlayed" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 126.0
+offset_right = 244.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Time Played: 0s"
+
+[node name="EarnedFromCPU" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 439.0
+offset_top = 126.0
+offset_right = 703.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Earned from CPU: 0"
+
+[node name="ServersEarned" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 871.0
+offset_top = 126.0
+offset_right = 1069.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Total Earned: 0"
+
+[node name="ServersEarnedSPS" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 871.0
+offset_top = 203.0
+offset_right = 1100.0
+offset_bottom = 241.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Total Earned - SPS: 0"
+
+[node name="ServersEarnedClicks" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 871.0
+offset_top = 280.0
+offset_right = 1105.0
+offset_bottom = 316.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Total Earned - Clicks: 0"
+
+[node name="EarnedFromCooler" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 439.0
+offset_top = 203.0
+offset_right = 706.0
+offset_bottom = 242.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Earned from Cooler: 0"
+
+[node name="EarnedFromRAM" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 439.0
+offset_top = 280.0
+offset_right = 703.0
+offset_bottom = 319.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Earned from RAM: 0"
+
+[node name="EarnedFromHDD" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 439.0
+offset_top = 357.0
+offset_right = 729.0
+offset_bottom = 401.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Earned from HDD: 0"
+
+[node name="EarnedFromGPU" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 439.0
+offset_top = 434.0
+offset_right = 760.0
+offset_bottom = 478.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Earned from GPU: 0"
+
+[node name="TimesClicked" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 203.0
+offset_right = 251.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Times Clicked: 0"
+
+[node name="UpgradesBought" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 280.0
+offset_right = 287.0
+offset_bottom = 324.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Upgrades Bought: 0"
+
+[node name="PermanentUpgradesBought" type="Label" parent="StatsLabels"]
+top_level = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 357.0
+offset_right = 336.0
+offset_bottom = 391.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooydn")
+text = "Permanent Upgrades Bought: 0"
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.821789, 0.821789, 0.821789, 1)
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 651.0
+texture = ExtResource("3_4q5xl")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 530.0
+offset_right = 775.0
+offset_bottom = 578.0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_c6xgt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lsk2w")
+text = "Back"
+
+[node name="StatsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 24.0
+offset_right = 657.0
+offset_bottom = 84.0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_ulfqj")
+theme_override_font_sizes/font_size = 60
+text = "STATS"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

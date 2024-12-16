@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=3 uid="uid://bc6bdacbq3uvt"]
+
+[ext_resource type="Script" path="res://game/scripts/menu.gd" id="1_s0aat"]
+[ext_resource type="FontFile" uid="uid://nhrer1v18pou" path="res://assets/fonts/TheConfessionFullRegular-8qGz.ttf" id="2_uryn0"]
+[ext_resource type="Texture2D" uid="uid://dov3jwpcmfvqd" path="res://assets/images/background/main menu.jpg" id="2_xie4t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uway1"]
+bg_color = Color(0, 0, 0, 0.945098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jqi6n"]
+bg_color = Color(0, 0, 0, 0.670588)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s0aat")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 655.0
+texture = ExtResource("2_xie4t")
+expand_mode = 1
+
+[node name="StatsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 450.0
+offset_right = 775.0
+offset_bottom = 498.0
+theme_override_fonts/font = ExtResource("2_uryn0")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_uway1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jqi6n")
+disabled = true
+text = "Stats"
+
+[node name="CreditsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 370.0
+offset_right = 775.0
+offset_bottom = 418.0
+theme_override_fonts/font = ExtResource("2_uryn0")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_uway1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jqi6n")
+text = "Credits"
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 290.0
+offset_right = 775.0
+offset_bottom = 338.0
+theme_override_fonts/font = ExtResource("2_uryn0")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_uway1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jqi6n")
+text = "Settings"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 530.0
+offset_right = 775.0
+offset_bottom = 578.0
+theme_override_fonts/font = ExtResource("2_uryn0")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_uway1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jqi6n")
+text = "Back"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 881.0
+offset_top = 596.0
+offset_right = 1147.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("2_uryn0")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_uway1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jqi6n")
+text = "Quit"
+
+[node name="MainMenuLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 29.0
+offset_right = 689.0
+offset_bottom = 89.0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_uryn0")
+theme_override_font_sizes/font_size = 60
+text = "MAIN MENU"
+
+[connection signal="pressed" from="StatsButton" to="." method="_on_stats_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

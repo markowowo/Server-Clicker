@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4lm8tgkaj4dr"]
+
+[ext_resource type="FontFile" uid="uid://nhrer1v18pou" path="res://assets/fonts/TheConfessionFullRegular-8qGz.ttf" id="1_ceisa"]
+[ext_resource type="Script" path="res://game/scripts/credits.gd" id="1_r758h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1fsu"]
+bg_color = Color(0, 0, 0, 0.945098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtsxe"]
+bg_color = Color(0, 0, 0, 0.670588)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r758h")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 657.0
+color = Color(0, 0, 0, 1)
+
+[node name="MarkoCredits" type="Label" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 115.0
+offset_right = 746.0
+offset_bottom = 238.0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("1_ceisa")
+theme_override_font_sizes/font_size = 60
+text = "Developer, Game Designer, UI/UX Designer - Marko"
+autowrap_mode = 2
+
+[node name="DentonCredits" type="Label" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 310.0
+offset_right = 746.0
+offset_bottom = 370.0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("1_ceisa")
+theme_override_font_sizes/font_size = 60
+text = "Game Tester, Feedback - Denton"
+autowrap_mode = 2
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 530.0
+offset_right = 775.0
+offset_bottom = 578.0
+theme_override_fonts/font = ExtResource("1_ceisa")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_b1fsu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jtsxe")
+text = "Back"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
